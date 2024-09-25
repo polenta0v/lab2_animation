@@ -1,0 +1,193 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-image: url('back.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box {
+  height: 256px;
+  width: 256px;
+  position: absolute;
+  left: 55px;
+  bottom: 200px;
+  background-image: url('beee.png');
+  background-size: cover;
+  transition: left 5s ease;
+}
+
+.box:hover {
+  left: calc(100% - 256px);
+}
+
+
+.obstacle1 {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: url('flover.png');
+  top: 1000px;
+  left: 1200px;
+  animation: moveVertical 3s ease-in-out infinite alternate;
+
+}
+
+
+.obstacle2 {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: url('flover.png');
+  top: 800px;
+  left: 1000px;
+  animation: moveHorizontal 4s ease-in-out infinite alternate;
+}
+
+.obstacle3 {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: url('flover.png');
+  top: 1000px;
+  left: 800px;
+  animation: moveDiagonal 5s ease-in-out infinite alternate;
+}
+
+.obstacle4 {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: url('flover.png');
+  top: 900px;
+  left: 600px;
+  animation: moveCircle 6s linear infinite;
+}
+
+.obstacle5 {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: url('flover.png');
+  top: 1000px;
+  left: 400px;
+  animation: moveRandom 3s ease-in-out infinite alternate;
+}
+
+.butterfly {
+  height: 50px;
+  width: 60px;
+  position: absolute;
+  right: 100%;
+  top: 500px;
+  background-image: url('butter.png');
+  background-size: cover;
+  animation: flyCurve 7s ease-in-out infinite;
+}
+
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100px);
+
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100px);
+
+  }
+}
+
+
+@keyframes moveDiagonal {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(100px, -100px);
+
+  }
+}
+
+@keyframes moveCircle {
+  0% {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+
+  }
+}
+
+@keyframes moveRandom {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(30px, -50px);
+
+  }
+
+  50% {
+    transform: translate(-50px, 30px);
+
+  }
+
+  75% {
+    transform: translate(20px, 50px);
+
+  }
+
+  100% {
+    transform: translate(0, 0);
+
+  }
+}
+
+@keyframes flyCurve {
+  0% {
+    left: 100%;
+    top: 500px;
+
+  }
+
+  25% {
+    left: 75%;
+    top: 400px;
+
+  }
+
+  50% {
+    left: 50%;
+    top: 500px;
+
+  }
+
+  75% {
+    left: 25%;
+    top: 350px;
+  }
+
+  100% {
+    left: -10%;
+    top: 500px;
+
+  }
+}
